@@ -13,7 +13,7 @@ tar xvfz file.tar.gz
 ls -lt[r]
 
 ### add user to sudo
-visudo -> <username> ALL=(ALL) NOPASSWD: ALL
+visudo -> `username` ALL=(ALL) NOPASSWD: ALL
 
 ### bad interpreter problem (unix/windows line endings)
 /bin/sh^M: bad interpreter: No such file or directory ->

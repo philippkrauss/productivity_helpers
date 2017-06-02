@@ -5,6 +5,9 @@ The following list of commands help me in my day to day work, but I don't need t
 ### serialize a groovy xml object to string
 groovy.xml.XmlUtil.serialize(xml)
 
+### CIFS mount on linux
+mount -t cifs -o username=domain\\\\user "//host/share" /mnt
+
 ### targz/untargz
 tar czvf file.tar.gz directory
 tar xvfz file.tar.gz
@@ -17,6 +20,7 @@ visudo -> `username` ALL=(ALL) NOPASSWD: ALL
 
 ### bad interpreter problem (unix/windows line endings)
 /bin/sh^M: bad interpreter: No such file or directory ->
+
 vi, :set fileformat=unix, :wq!
 
 ### show open port
@@ -24,6 +28,8 @@ sudo netstat -tulpn
 
 ### openssl handshake
 openssl s_client -connect localhost:9443
+
+python script for ssl connection check: [cipherscan](https://github.com/mozilla/cipherscan)
 
 ### tcpdump
 tcpdump -ni any -s 0 -w - port 9444

@@ -33,3 +33,10 @@ python script for ssl connection check: [cipherscan](https://github.com/mozilla/
 
 ### tcpdump
 tcpdump -ni any -s 0 -w - port 9444
+
+### login without password
+#!/usr/bin/expect
+spawn  ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no opsa@[lrange $argv 0 1]
+expect "assword:"
+send "... enter password here...";
+interact
